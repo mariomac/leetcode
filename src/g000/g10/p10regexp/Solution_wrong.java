@@ -1,28 +1,37 @@
 package g000.g10.p10regexp;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution_wrong {
+    private class State {
+        boolean finalState = false;
+        Map<Character,State> transitions = new HashMap<Character,State>();
+
+    }
+
     public boolean isMatch(String s, String p) {
         char[] sc = s.toCharArray();
         char[] regex = p.toCharArray();
-        int pr = 0;
-        int psc = 0;
-        while(pr < regex.length && psc < sc.length) {
-            char precedingChar = regex[pr++];
-            if (pr < regex.length && regex[pr] == '*') {
-                while (psc < sc.length && (precedingChar == '.' || sc[psc] == precedingChar)) {
-                    psc++;
+        int pr = regex.length - 1;
+        int psc = sc.length -1;
+        while(pr >= 0 && psc >= 0) {
+            if(regex[pr] == '.') {
+                psc--;
+            } else if(regex[pr] == '*') {
+                pr--;
+                while(psc>=0 && (regex[pr] == '.' || sc[psc] == regex[pr])) {
+                    psc--;
                 }
-                pr++;
-            } else if(precedingChar == '.' || precedingChar == sc[psc]) {
-                psc++;
+            } else if(regex[pr] == sc[psc]) {
+                psc--;
             } else {
                 return false;
             }
+
+            pr--;
         }
-        // empty optional chars of regexp
-        while(pr < regex.length - 1 && regex[pr+1] == '*') {
-            pr += 2;
-        }
-        return (pr == regex.length && psc == sc.length);
+        while(pr >= 0 && regex[pr] == '*') pr -= 2;
+        return pr < 0 && psc < 0;
     }
 }

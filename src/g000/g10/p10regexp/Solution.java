@@ -1,10 +1,29 @@
 package g000.g10.p10regexp;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
+@SuppressWarnings("ALL")
 public class Solution {
+    static class State {
+        static char[] regex;
+        char check;
+        int pr;
+        public State(char check, int pr) {
+            this.check = check;
+            this.pr = pr;
+        }
+
+        public State(char check) {
+            this.check = check;
+        }
+
+        Set<State> next(char input) {
+            if()
+        }
+    }
+
     public boolean isMatch(String s, String p) {
+
         char[] sc = s.toCharArray();
         char[] regex = p.toCharArray();
         int pr = regex.length - 1;
