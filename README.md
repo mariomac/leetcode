@@ -14,7 +14,7 @@ My solutions for leetcode challenges
 | 9 | Palindrome number | Easy | 26.88% |
 | 10 | Regular Expression Matching | Hard | Doesn't work for ambiguous grammars|
 | 11 | Container with most water | Medium | 73.09% |
-| 23 | Merge K sorted lists | Hard | |
+| 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
 | 37 | Sudoku Solver | Hard | 70.31% |

@@ -1,66 +1,43 @@
 package g000.g20.p23mergeksortedlists;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * @author Mario Macias (http://github.com/mariomac)
  */
-@SuppressWarnings("Duplicates")
 public class Solution {
-
-	// TODO: quicksort
-	private void sort(ListNode[] lists) {
-		Arrays.sort(lists, new Comparator<ListNode>() {
-			@Override
-			public int compare(ListNode o1, ListNode o2) {
-				return o1.val - o2.val;
-			}
-		});
-	}
-
-	public ListNode mergeKLists(ListNode[] lists) {
-		sort(lists);
-		LinkedList<ListNode> llists = new LinkedList<ListNode>();
-		for(ListNode l : lists) {
-			llists.addLast(l);
-		}
+	public ListNode merge(ListNode l1, ListNode l2) {
 		ListNode preHead = new ListNode(0);
 		ListNode current = preHead;
-
-
-		// insert lower node
-		current.next = lists[0];
-		lists[0] = lists[0].next;
-
-
-		boolean finished = false;
-		while(!finished) {
-			ListNode lower = null;
-			ListNode secondLower = null;
-			int idx = 0, lowerIndex = 0;
-			for(ListNode l : lists) {
-				if(l != null && (lower == null || lower.val > l.val)) {
-					secondLower = lower;
-					lower = l;
-					lowerIndex = idx;
-				}
-				idx++;
-			}
-			if(lower == null) {
-				finished = true;
-			} else {
-				current.next = lower;
+		while(l1 != null || l2 != null) {
+			if(l1 == null || (l2 != null && l2.val < l1.val)) {
+				current.next = l2;
 				current = current.next;
-				// optimization: insert values from the same queue that are lower than the second lower
-				for(ListNode l = lower.next ; secondLower != null && l != null && l.val <= secondLower.val ; l = l.next) {
-					current = l;
-				}
-				lists[lowerIndex] = current.next;
+				l2 = l2.next;
+			} else {
+				current.next = l1;
+				current = current.next;
+				l1 = l1.next;
 			}
 		}
 		return preHead.next;
+	}
+
+	public ListNode mergeKLists(ListNode[] lists) {
+		if(lists.length == 0) return null;
+		int length = lists.length;
+		while(length > 1) {
+			int dst = 0;
+			for(int i = 0 ; i < length ; i+=2) {
+				if(i == length - 1) {
+					lists[dst] = lists[i];
+				} else {
+					lists[dst] = merge(lists[i],lists[i+1]);
+				}
+				dst++;
+			}
+			length = length / 2 + length % 2;
+		}
+		return lists[0];
 	}
 }
