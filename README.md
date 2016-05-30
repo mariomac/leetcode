@@ -12,6 +12,9 @@ My solutions for leetcode challenges
 | 7 | Reverse Integer | Easy | 45.49% |
 | 8 | String to integer (atoi) | Easy | 84.63% |
 | 9 | Palindrome number | Easy | 26.88% |
+| 10 | Regular Expression Matching | Hard | Doesn't work for ambiguous grammars|
+| 11 | Container with most water | Medium | WIP |
+| 23 | Merge K sorted lists | Hard | |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
 | 37 | Sudoku Solver | Hard | 70.31% |
