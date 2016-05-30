@@ -1,15 +1,12 @@
 package g000.g20.p23mergeksortedlists;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.LinkedList;
 
 /**
  * @author Mario Macias (http://github.com/mariomac)
  */
-@SuppressWarnings("Duplicates")
-public class Solution {
+public class Solution_slow {
 
 	// TODO: quicksort
 	private void sort(ListNode[] lists) {
@@ -22,20 +19,11 @@ public class Solution {
 	}
 
 	public ListNode mergeKLists(ListNode[] lists) {
+		// otra tecnica mejor: ordenar las listas y sacar siempre del primero, actualizando el orden
 		sort(lists);
-		LinkedList<ListNode> llists = new LinkedList<ListNode>();
-		for(ListNode l : lists) {
-			llists.addLast(l);
-		}
+
 		ListNode preHead = new ListNode(0);
 		ListNode current = preHead;
-
-
-		// insert lower node
-		current.next = lists[0];
-		lists[0] = lists[0].next;
-
-
 		boolean finished = false;
 		while(!finished) {
 			ListNode lower = null;
