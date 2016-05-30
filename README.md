@@ -2,9 +2,8 @@
 My solutions for leetcode challenges
 
 | Number | Problem | Dificulty | Beating |
-| - | ------- | --------- | ------- |
+|-|-------|---------|-------|
 | 1 | Two Sum | Easy      | 58.79%  |
-
 | 2 | Add two numbers | Medium | 35.18% |
 | 3 | Longest Substring Without Repeating Characters | Medium | 3.22% |
 | 4 | Median of Two Sorted Arrays | Hard | 40.63% |
