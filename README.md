@@ -16,6 +16,7 @@ Num | Problem | Dificulty | Beating
 | 11 | Container with most water | Medium | 73.09% |
 | 12 | Integer to Roman | Medium | 0.66% |
 | 13 | Roman to Integer | Medium | 58.56% |
+| 14 | Longest Common Prefix | Easy | 9.6% |
 | 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
