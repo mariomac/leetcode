@@ -1,6 +1,4 @@
-package g000.g10.p10regexp;
-
-import java.util.*;
+package g000.g10.p10regexp.old.nowork;
 
 @SuppressWarnings("ALL")
 public class Solution {
