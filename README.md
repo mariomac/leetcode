@@ -17,7 +17,10 @@ Num | Problem | Dificulty | Beating
 | 12 | Integer to Roman | Medium | 0.66% |
 | 13 | Roman to Integer | Medium | 58.56% |
 | 14 | Longest Common Prefix | Easy | 9.6% |
-| 15 | 3Sum | Medium | 5.18% |
+| 15 | 3 Sum | Medium | 5.18% |
+| 16 | 3 Sum Closest | Medium | 31.6% |
+| 17 | Letter Combinations of a Phone Number | Medium | 48.15% |
+| 18 | 4 sum
 | 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |

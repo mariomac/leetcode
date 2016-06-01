@@ -1,4 +1,4 @@
-package g000.g10.p153sum;
+package g000.g10.p15_3sum;
 
 import java.util.*;
 
