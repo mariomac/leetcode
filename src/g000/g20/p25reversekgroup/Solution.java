@@ -41,7 +41,7 @@ public class Solution {
 				groupHead.next = middle;
 				pointer = middle;
 				if(previousGroupHead != null) {
-					previousGroupHead.next = middle;
+					previousGroupHead.next = previous;
 				}
 				previousGroupHead = groupHead;
 			}
