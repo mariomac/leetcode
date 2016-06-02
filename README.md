@@ -12,7 +12,7 @@ Num | Problem | Dificulty | Beating
 | 7 | Reverse Integer | Easy | 45.49% |
 | 8 | String to integer (atoi) | Easy | 84.63% |
 | 9 | Palindrome number | Easy | 26.88% |
-| 10 | Regular Expression Matching | Hard | Doesn't work for ambiguous grammars |
+| 10 | Regular Expression Matching | Hard | 47.57% |
 | 11 | Container with most water | Medium | 73.09% |
 | 12 | Integer to Roman | Medium | 39.70% |
 | 13 | Roman to Integer | Medium | 58.56% |
