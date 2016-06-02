@@ -21,6 +21,10 @@ Num | Problem | Dificulty | Beating
 | 16 | 3 Sum Closest | Medium | 31.6% |
 | 17 | Letter Combinations of a Phone Number | Medium | 48.15% |
 | 18 | 4 Sum | Medium | 45.67% |
+19 | Remove Nth Node From End of List | Easy | 3.16% |
+20 | Valid Parentheses | Easy | 97% |
+21 | Merge 2 sorted lists | Easy | 9%
+22 | Generate Parentheses | Medium | 13.19%
 | 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
