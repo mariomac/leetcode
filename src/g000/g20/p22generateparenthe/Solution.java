@@ -7,6 +7,7 @@ import java.util.*;
  */
 public class Solution {
 	public List<String> generateParenthesis(int n) {
+
 		return new ArrayList<>(generateNonDuplicateParenthesis(n));
 	}
 

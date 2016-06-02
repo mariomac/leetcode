@@ -26,6 +26,7 @@ Num | Problem | Dificulty | Beating
 21 | Merge 2 sorted lists | Easy | 9%
 22 | Generate Parentheses | Medium | 13.19%
 | 23 | Merge K sorted lists | Hard | 78.55% |
+25 | Reverse Nodes in K Group | Hard ||
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
 | 37 | Sudoku Solver | Hard | 70.31% |
