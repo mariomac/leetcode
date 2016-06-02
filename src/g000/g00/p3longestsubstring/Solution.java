@@ -19,11 +19,13 @@ public class Solution {
 			if(lastAppearance[c] >= 0) {
 				int length = pos - lastRepetition;
 				if(length > max) max = length;
-				lastRepetition = pos;
+				if( lastAppearance[c] + 1 > lastRepetition) {
+					lastRepetition = lastAppearance[c] + 1;
+				}
 			}
 			lastAppearance[c] = pos;
 		}
-		if(stringLength-lastRepetition > max) max = stringLength - (lastRepetition )+ 1 ;
+		if(stringLength-lastRepetition > max) max = stringLength - (lastRepetition ) ;
 
 		return max;
     }

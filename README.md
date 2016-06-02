@@ -5,7 +5,7 @@ Num | Problem | Dificulty | Beating
 --- | ------- | --------- | -------
 | 1 | Two Sum | Easy      | 58.79% 
 | 2 | Add two numbers | Medium | 35.18% |
-| 3 | Longest Substring Without Repeating Characters | Medium | 3.22% RECHECK |
+| 3 | Longest Substring Without Repeating Characters | Medium | 79.27% |
 | 4 | Median of Two Sorted Arrays | Hard | 40.63% |
 | 5 | Longest Palindromic Substring | Medium | 87.93% |
 | 6 | ZigZag conversion | Easy | 60.85% |
@@ -21,7 +21,6 @@ Num | Problem | Dificulty | Beating
 | 16 | 3 Sum Closest | Medium | 31.6% |
 | 17 | Letter Combinations of a Phone Number | Medium | 48.15% |
 | 18 | 4 Sum | Medium | 45.67% |
- 
 | 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |

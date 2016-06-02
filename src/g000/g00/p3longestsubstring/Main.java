@@ -9,6 +9,6 @@ public class Main {
 		System.out.println( s.lengthOfLongestSubstring("aabaaa"));
 		System.out.println( s.lengthOfLongestSubstring("aaabbbbaa"));
 		System.out.println( s.lengthOfLongestSubstring("aaabcdbbbaamelioy"));
-		System.out.println( s.lengthOfLongestSubstring("lakdsfjlkasdjfjkhvxvcmzm,vxcbiuewui"));
+		System.out.println( s.lengthOfLongestSubstring("dvdf"));
 	}
 }
