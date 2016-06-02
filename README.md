@@ -21,9 +21,9 @@ Num | Problem | Dificulty | Beating
 | 16 | 3 Sum Closest | Medium | 31.6% |
 | 17 | Letter Combinations of a Phone Number | Medium | 48.15% |
 | 18 | 4 Sum | Medium | 45.67% |
- 
 | 23 | Merge K sorted lists | Hard | 78.55% |
 | 27 | Remove Element | Easy | 3.73% |
 | 30 | Substring with concatenation all words | Hard | Time limit exceeded |
+| 33 | Longest valid parentheses | Hard | |
 | 37 | Sudoku Solver | Hard | 70.31% |
 | 64 | Minimum Path Sum | Medium | 0.16% |
