@@ -1,86 +1,49 @@
 package g000.g30.p30substringwithconcat;
 
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import sun.security.util.Length;
+
+import java.util.*;
 
 /**
  * Created by mmacias on 27/5/16.
  */
 public class Solution {
-    private class PotentialSolution {
-        int currentIdx;
-        char[] current;
-        Set<char[]> words;
-        int startIndex;
 
-        public PotentialSolution(int currentIdx, char[] current, Set<char[]> words, int startIndex) {
-            this.currentIdx = currentIdx;
-            this.current = current;
-            this.words = words;
-            this.startIndex = startIndex;
+    public List<String> permutations(String[] words, boolean[] used, int usedNum) {
+        if(usedNum == words.length) return Arrays.asList("");
+        LinkedList<String> results = new LinkedList<>();
+        for(int i = 0 ; i < words.length ; i++) {
+            if(!used[i]) {
+                used[i] = true;
+                for(String s : permutations(words,used,usedNum+1)) {
+                    results.add(words[i]+s);
+                }
+                used[i] = false;
+            }
         }
+        return results;
     }
-    public List<Integer> findSubstring(String s, String[] words) {
-        int totalSize = 0;
-        char[] sc = s.toCharArray();
-        Set<char[]> wordChars =  new HashSet<char[]>();
-        for(String w : words) {
-            wordChars.add(w.toCharArray());
-            totalSize += w.length();
-        }
-        List<Integer> solutions = new ArrayList<Integer>();
-        Set<PotentialSolution> potentialSolutions = new HashSet<PotentialSolution>();
-        for(int i = 0 ; i < sc.length ; i++) {
-            {	// Check validity of currently considered potential solutions
-                Set<PotentialSolution> toRemove = new HashSet<PotentialSolution>();
-                for(PotentialSolution currentSolution : potentialSolutions) {
-                    if(currentSolution.currentIdx >= currentSolution.current.length) {
-                        currentSolution.current = null;
-                    } else if(sc[i] == currentSolution.current[currentSolution.currentIdx]) {
-                        currentSolution.currentIdx++;
-                    } else {
-                        toRemove.add(currentSolution);
-                    }
 
-                }
-                potentialSolutions.removeAll(toRemove);
-            }
-            { // Add new potential solutions when a word is finished
-                Set<PotentialSolution> toRemove = new HashSet<PotentialSolution>();
-                Set<PotentialSolution> toAdd = new HashSet<PotentialSolution>();
-                for(PotentialSolution currentSolution : potentialSolutions) {
-                    if(currentSolution.current == null) {
-                        toRemove.add(currentSolution);
-                        if(currentSolution.words.size() == 0) {
-                            solutions.add(currentSolution.startIndex);
-                        } else {
-                            for(char[] w : currentSolution.words) {
-                                if(w[0] == sc[i]) {
-                                    Set<char[]> removedWords = new HashSet<char[]>(currentSolution.words);
-                                    removedWords.remove(w);
-                                    toAdd.add(new PotentialSolution(1,w,removedWords,currentSolution.startIndex));
-                                }
-                            }
-                        }
-                    }
-                }
-                potentialSolutions.removeAll(toRemove);
-                potentialSolutions.addAll(toAdd);
-            }
-            if(i + totalSize < sc.length) { // Add new potential solutions from a fresh intend
-                for(char[] w : wordChars) {
-                    if(w[0] == sc[i]) {
-                        Set<char[]> removedWords = new HashSet<char[]>(wordChars);
-                        removedWords.remove(w);
-                        potentialSolutions.add(new PotentialSolution(1,w,removedWords,i));
-                    }
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> results = new ArrayList<>(s.length());
+        List<String> permutations = permutations(words,new boolean[words.length],0);
+        int permLength = permutations.get(0).length();
+        System.out.println("permLength = " + permLength);
+        List<Integer> hashes = new ArrayList<>(permutations.size());
+        for(String perm : permutations) {
+            hashes.add(perm.hashCode());
+        }
+        for(int i = 0 ; i < s.length() - permLength ; i++) {
+            int substr = s.substring(i,i+permLength).hashCode();
+            for(Integer h : hashes) {
+                if (substr == h) {
+                    results.add(i);
+                    break;
                 }
             }
         }
-        return solutions;
+        return results;
     }
 
 }
