@@ -10,37 +10,42 @@ import java.util.*;
  */
 public class Solution {
 
-    public List<String> permutations(String[] words, boolean[] used, int usedNum) {
-        if(usedNum == words.length) return Arrays.asList("");
-        LinkedList<String> results = new LinkedList<>();
-        for(int i = 0 ; i < words.length ; i++) {
-            if(!used[i]) {
-                used[i] = true;
-                for(String s : permutations(words,used,usedNum+1)) {
-                    results.add(words[i]+s);
-                }
-                used[i] = false;
-            }
+    private static final boolean equals(char[] s1, int i1, char[] s2, int i2, int length) {
+        for(int i = 0 ; i < length ; i++) {
+            if(s1[i1+i] != s2[i2+i]) return false;
         }
-        return results;
+        return true;
+    }
+
+    private boolean findSubstr(char[] s, int from, ArrayDeque<char[]> words) {
+        if(words.size() == 0) return true;
+        int iterations = words.size();
+        boolean foundSubstr = false;
+        for(int i = 0 ; i < iterations && !foundSubstr ; i++) {
+            char[] word = words.pollFirst();
+            if(equals(word,0,s,from,word.length)) {
+                foundSubstr |= findSubstr(s,from+word.length, words.clone());
+            }
+            words.addLast(word);
+        }
+        return foundSubstr;
     }
 
     public List<Integer> findSubstring(String s, String[] words) {
-        List<Integer> results = new ArrayList<>(s.length());
-        List<String> permutations = permutations(words,new boolean[words.length],0);
-        int permLength = permutations.get(0).length();
-        System.out.println("permLength = " + permLength);
-        List<Integer> hashes = new ArrayList<>(permutations.size());
-        for(String perm : permutations) {
-            hashes.add(perm.hashCode());
+        char[] str = s.toCharArray();
+
+        ArrayDeque<char[]> wordsDeque = new ArrayDeque<>(words.length);
+        int permutationLength = 0;
+        for(int i = 0 ; i < words.length ; i++) {
+            char[] arr =words[i].toCharArray();
+            wordsDeque.add(arr);
+            permutationLength += arr.length;
         }
-        for(int i = 0 ; i < s.length() - permLength ; i++) {
-            int substr = s.substring(i,i+permLength).hashCode();
-            for(Integer h : hashes) {
-                if (substr == h) {
-                    results.add(i);
-                    break;
-                }
+
+        List<Integer> results = new ArrayList<>(str.length);
+        for(int i = 0 ; i < str.length - permutationLength ; i++) {
+            if(findSubstr(str,i,wordsDeque)) {
+                results.add(i);
             }
         }
         return results;

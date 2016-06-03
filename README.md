@@ -28,7 +28,8 @@ Num | Problem | Dificulty | Beating
 | 23 | Merge K sorted lists | Hard | 78.55% |
 25 | Reverse Nodes in K Group | Hard | 5.53% |
 | 27 | Remove Element | Easy | 3.73% |
-| 30 | Substring with concatenation all words | Hard | Time limit exceeded |
+| 30 | Substring with concatenation all words | Hard | TLE |
 | 33 | Longest valid parentheses | Hard | |
 | 37 | Sudoku Solver | Hard | 70.31% |
+| 45 | Jump Game II | Hard | **100%** |
 | 64 | Minimum Path Sum | Medium | 0.16% |
