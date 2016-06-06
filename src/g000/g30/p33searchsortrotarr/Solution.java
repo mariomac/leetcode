@@ -8,14 +8,34 @@ public class Solution {
 		int l = 0, r = nums.length - 1;
 		// binary search to look for the pivot
 		int pivot = 0;
-		while((r-l) <= 1) {
+		while( l != r ) {
 			pivot = (l + r) / 2;
-			if(nums[l] > nums[pivot]) {
-				r = pivot;
-			} else {
+			if(pivot == l || pivot == r) {
+				if(nums[l] < nums[r]) {
+					return l;
+				} else {
+					return r;
+				}
+			} else if(nums[pivot] < l) {
 				l = pivot;
+			} else {
+				r = pivot;
 			}
+			for(int n : nums) {
+				System.out.print(n + "\t");
+			}
+			System.out.println();
+			for(int i = 0 ; i < nums.length ; i++) {
+				if(i == l) System.out.print("l\t");
+				else if(i == r) System.out.print("r\t");
+				else if(i == pivot) System.out.println("*\t");
+				else System.out.print("\t");
+			}
+			System.out.println(
+
+			);
 		}
+
 		return pivot;
 	}
 }
