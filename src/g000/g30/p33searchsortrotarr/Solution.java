@@ -10,17 +10,7 @@ public class Solution {
 		int pivot = 0;
 		while( l != r ) {
 			pivot = (l + r) / 2;
-			if(pivot == l || pivot == r) {
-				if(nums[l] < nums[r]) {
-					return l;
-				} else {
-					return r;
-				}
-			} else if(nums[pivot] < l) {
-				l = pivot;
-			} else {
-				r = pivot;
-			}
+
 			for(int n : nums) {
 				System.out.print(n + "\t");
 			}
@@ -28,13 +18,35 @@ public class Solution {
 			for(int i = 0 ; i < nums.length ; i++) {
 				if(i == l) System.out.print("l\t");
 				else if(i == r) System.out.print("r\t");
-				else if(i == pivot) System.out.println("*\t");
+				else if(i == pivot) System.out.print("*\t");
 				else System.out.print("\t");
 			}
-			System.out.println(
-
-			);
+			System.out.println();
+			System.out.println();
+			if(pivot == l || pivot == r) {
+				if(nums[l] < nums[r]) {
+					return l;
+				} else {
+					return r;
+				}
+			} else if(nums[pivot] < nums[l]) {
+				r = pivot;
+			} else {
+				l = pivot;
+			}
 		}
+		for(int n : nums) {
+			System.out.print(n + "\t");
+		}
+		System.out.println();
+		for(int i = 0 ; i < nums.length ; i++) {
+			if(i == l) System.out.print("l\t");
+			else if(i == r) System.out.print("r\t");
+			else if(i == pivot) System.out.print("*\t");
+			else System.out.print("\t");
+		}
+		System.out.println();
+		System.out.println();
 
 		return pivot;
 	}
