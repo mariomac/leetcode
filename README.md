@@ -10,6 +10,7 @@ Num | Problem | Beating
 | 23 | Merge K sorted lists |  78.55% |
 25 | Reverse Nodes in K Group |  5.53% |
 | 30 | Substring with concatenation all words |  TLE |
+| 33 | Search in Rotated Sorted Array | 6.58% |
 | 37 | Sudoku Solver |  70.31% |
 | 45 | Jump Game II |  **100%** |
 | 55 | N-Queens |  65.15% |
