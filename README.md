@@ -12,8 +12,10 @@ Num | Problem | Beating
 | 30 | Substring with concatenation all words |  TLE |
 | 33 | Search in Rotated Sorted Array | 6.58% |
 | 37 | Sudoku Solver |  70.31% |
+42 | Trapping rain | TLE
 | 45 | Jump Game II |  **100%** |
 | 55 | N-Queens |  65.15% |
+| 354 | Russian dolls envelopes | 599 ms (N/A%)
 
 ## Medium-rated
 
@@ -45,4 +47,5 @@ Num | Problem |  Beating
 19 | Remove Nth Node From End of List |  3.16% |
 20 | Valid Parentheses |  97% |
 21 | Merge 2 sorted lists |  9%
+26 | Remove duplicates from sorted array | 51.04%
 | 27 | Remove Element |  3.73% |
