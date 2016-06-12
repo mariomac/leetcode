@@ -26,13 +26,14 @@ public class LRUCache {
         if(n == null) {
             n = new Node(key,value);
             keyValues.put(key,n);
-            if(tail == null) {
-                tail = n;
-                head = n;
-            }
+            insert(n);
             if(keyValues.size() > capacity) {
                 Node t = keyValues.remove(tail.key);
                 tail = tail.next;
+                tail.previous = null;
+            } else if(tail == null) {
+                tail = n;
+                head = n;
             }
         } else {
             n.value = value;
@@ -40,13 +41,23 @@ public class LRUCache {
         }
     }
 
-    private void update(Node n) {
-        if(tail == null && head == null) {
+    private void insert(Node n) {
+        if(tail == null) {
             tail = head = n;
-        } else if(n == tail) {
+        } else {
+            head.next = n;
+            n.previous = head;
+            n.next = null;
+            head = n;
+        }
+    }
+    private void update(Node n) {
+        if(n == tail) {
             if(n != head) {
                 tail = n.next;
+                tail.previous = null;
                 n.previous = head;
+                head.next = n;
                 head = n;
             }
         } else if(n != head) {

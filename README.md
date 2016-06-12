@@ -15,7 +15,7 @@ Num | Problem | Beating
 42 | Trapping rain | TLE
 | 45 | Jump Game II |  **100%** |
 | 55 | N-Queens |  65.15% |
-146 | LRU Cache | 1.76% |
+146 | LRU Cache | 83.44% |
 | 354 | Russian dolls envelopes | 599 ms (N/A%)
 
 ## Medium-rated
