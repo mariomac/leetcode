@@ -14,7 +14,8 @@ Num | Problem | Beating
 | 37 | Sudoku Solver |  70.31% |
 42 | Trapping rain | TLE
 | 45 | Jump Game II |  **100%** |
-| 55 | N-Queens |  65.15% |
+| 51 | N-Queens |  65.15% |
+| 52 | N-Queens II | 59.44%
 146 | LRU Cache | 83.44% |
 | 354 | Russian dolls envelopes | 599 ms (N/A%)
 

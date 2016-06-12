@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 		Solution s = new Solution();
         LinkedList<int[]> data = new LinkedList<>();
-        BufferedReader br = new BufferedReader(new InputStreamReader(Main.class.getResourceAsStream("data.txt")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(Main.class.getResourceAsStream("data2.txt")));
         String read = null;
         do {
             read = br.readLine();

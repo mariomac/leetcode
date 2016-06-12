@@ -1,4 +1,4 @@
-package g000.g50.p550nqueens;
+package g000.g50.p51nqueens;
 
 import java.util.List;
 
