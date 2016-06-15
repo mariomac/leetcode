@@ -37,6 +37,7 @@ Num | Problem |  Beating
 22 | Generate Parentheses |  13.19%
 29 | Divide two integers | wip
 35 | Search insert position | 0ms (N/A%)
+49 | Group Anagrams | 82.37%
 | 64 | Minimum Path Sum |  0.16% |
 332 | Coin change | 6.90%
 
