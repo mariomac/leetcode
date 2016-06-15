@@ -53,4 +53,5 @@ Num | Problem |  Beating
 21 | Merge 2 sorted lists |  9%
 26 | Remove duplicates from sorted array | 51.04%
 | 27 | Remove Element |  3.73% |
+242 | Valid anagram | 32.53%
 263 | Ugly Number | 20.63%
