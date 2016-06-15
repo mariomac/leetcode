@@ -34,7 +34,9 @@ Num | Problem |  Beating
 | 17 | Letter Combinations of a Phone Number |  48.15% |
 | 18 | 4 Sum |  45.67% |
 22 | Generate Parentheses |  13.19%
+29 | Divide two integers | wip
 | 64 | Minimum Path Sum |  0.16% |
+332 | Coin change | 6.90%
 
 ## Easy-rated
 
@@ -49,5 +51,8 @@ Num | Problem |  Beating
 19 | Remove Nth Node From End of List |  3.16% |
 20 | Valid Parentheses |  97% |
 21 | Merge 2 sorted lists |  9%
+24 | Swap Nodes in pairs | N/A (0ms)
 26 | Remove duplicates from sorted array | 51.04%
 | 27 | Remove Element |  3.73% |
+| 28 | strStr | 74%
+36 | Valid Sudoku | 69.16%
