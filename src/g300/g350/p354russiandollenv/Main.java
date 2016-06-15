@@ -1,11 +1,9 @@
-package g300.p354russiandollenv;
+package g300.g350.p354russiandollenv;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 

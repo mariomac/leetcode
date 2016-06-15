@@ -10,6 +10,7 @@ Num | Problem | Beating
 | 23 | Merge K sorted lists |  78.55% |
 25 | Reverse Nodes in K Group |  5.53% |
 | 30 | Substring with concatenation all words |  TLE |
+32 | Longest valid parentheses | 85.59%
 | 33 | Search in Rotated Sorted Array | 6.58% |
 | 37 | Sudoku Solver |  70.31% |
 42 | Trapping rain | TLE
@@ -17,7 +18,7 @@ Num | Problem | Beating
 | 51 | N-Queens |  65.15% |
 | 52 | N-Queens II | 59.44%
 146 | LRU Cache | 83.44% |
-| 354 | Russian dolls envelopes | 599 ms (N/A%)
+| 354 | Russian dolls envelopes | 23.99%
 
 ## Medium-rated
 
@@ -35,6 +36,7 @@ Num | Problem |  Beating
 | 18 | 4 Sum |  45.67% |
 22 | Generate Parentheses |  13.19%
 29 | Divide two integers | wip
+35 | Search insert position | 0ms (N/A%)
 | 64 | Minimum Path Sum |  0.16% |
 332 | Coin change | 6.90%
 
@@ -56,3 +58,4 @@ Num | Problem |  Beating
 | 27 | Remove Element |  3.73% |
 | 28 | strStr | 74%
 36 | Valid Sudoku | 69.16%
+263 | Ugly Number | 20.63%
