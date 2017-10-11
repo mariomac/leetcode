@@ -15,6 +15,7 @@ Num | Problem | Beating
 | 37 | Sudoku Solver |  70.31% |
 38 | Count and say | 47.9% |
 42 | Trapping rain | TLE
+44 | Wildcard matching | TLE
 | 45 | Jump Game II |  **100%** |
 | 51 | N-Queens |  65.15% |
 | 52 | N-Queens II | 59.44%
