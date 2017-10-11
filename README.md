@@ -36,6 +36,7 @@ Num | Problem |  Beating
 | 18 | 4 Sum |  45.67% |
 22 | Generate Parentheses |  13.19%
 29 | Divide two integers | wip
+34 | Search range | 14%
 35 | Search insert position | 0ms (N/A%)
 49 | Group Anagrams | 82.37%
 | 64 | Minimum Path Sum |  0.16% |
