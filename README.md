@@ -13,6 +13,7 @@ Num | Problem | Beating
 32 | Longest valid parentheses | 85.59%
 | 33 | Search in Rotated Sorted Array | 6.58% |
 | 37 | Sudoku Solver |  70.31% |
+38 | Count and say | 47.9% |
 42 | Trapping rain | TLE
 | 45 | Jump Game II |  **100%** |
 | 51 | N-Queens |  65.15% |

@@ -25,7 +25,6 @@ public class Solution {
      */
     public int countAndSayLong(char[] src, int srcLength, char[] dst) {
         char last = src[0];
-        int srcIndex = 1;
         int dstLength = 0;
         int lastCount = 1;
 
@@ -34,14 +33,14 @@ public class Solution {
                 lastCount++;
             } else {
                 dst[dstLength++] = (char) ('0' + lastCount);
-                dst[dstLength++] = (char) ('0' + last);
+                dst[dstLength++] = last;
                 last = src[i];
                 lastCount = 1;
             }
         }
 
         dst[dstLength++] = (char) ('0' + lastCount);
-        dst[dstLength++] = (char) ('0' + last);
+        dst[dstLength++] = last;
 
         return dstLength;
     }
