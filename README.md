@@ -63,5 +63,6 @@ Num | Problem |  Beating
 | 27 | Remove Element |  3.73% |
 | 28 | strStr | 74%
 36 | Valid Sudoku | 69.16%
+100 | Same Tree | 12.81%
 242 | Valid anagram | 32.53%
 263 | Ugly Number | 20.63%
