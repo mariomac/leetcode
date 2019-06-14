@@ -17,6 +17,7 @@ Num | Problem | Beating
 42 | Trapping rain | TLE
 44 | Wildcard matching | TLE
 | 45 | Jump Game II |  **100%** |
+| 50 | Pow(x,n) | 100% of Go submissions |
 | 51 | N-Queens |  65.15% |
 | 52 | N-Queens II | 59.44%
 97 | Interleaving String | TLE
