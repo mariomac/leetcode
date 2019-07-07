@@ -45,6 +45,7 @@ Num | Problem |  Beating
 49 | Group Anagrams | 82.37%
 | 64 | Minimum Path Sum |  0.16% |
 332 | Coin change | 6.90%
+799 | Champagne Tower | 100% of Go submissions
 
 ## Easy-rated
 
