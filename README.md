@@ -1,5 +1,5 @@
 # leetcode
-My solutions for leetcode challenges
+My solutions to some Leetcode challenges
 
 ## Hard-rated
 
@@ -22,6 +22,7 @@ Num | Problem | Beating
 | 52 | N-Queens II | 59.44%
 97 | Interleaving String | TLE
 146 | LRU Cache | 83.44% |
+174 | Dungeon game | 100% of Go submissions
 | 354 | Russian dolls envelopes | 23.99%
 
 ## Medium-rated
