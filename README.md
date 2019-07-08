@@ -40,7 +40,7 @@ Num | Problem |  Beating
 | 17 | Letter Combinations of a Phone Number |  48.15% |
 | 18 | 4 Sum |  45.67% |
 22 | Generate Parentheses |  13.19%
-29 | Divide two integers | wip
+29 | Divide two integers | 6.98%
 34 | Search range | 14%
 35 | Search insert position | 0ms (N/A%)
 49 | Group Anagrams | 82.37%
