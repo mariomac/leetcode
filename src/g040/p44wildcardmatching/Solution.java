@@ -1,58 +1,85 @@
 package g040.p44wildcardmatching;
 
+/**
+ * DP approach, using a matrix that represents an inverse path from the success
+ * path[M][N] to the origin (path[0][0])
+ *
+ * Each position of the matrix is built as a function of the neighbors (if you
+ * can reach such position from any neighbor that allows stepping in diagonal
+ * or in any way) and the pattern matching of the corresponding input and
+ * pattern chars.
+ */
 public class Solution {
+
+    private static final int NOWAY = 0;
+    private static final int DIAGONAL = 1;
+    private static final int ANYWAY = 2;
+
+    private int[][] path;
+
     public boolean isMatch(String input, String pattern) {
         char[] in = input.toCharArray();
         char[] pt = pattern.toCharArray();
-        cached = new Boolean[in.length][pt.length];
-        return matches(in, in.length - 1, pt, pt.length - 1);
+        path = new int[in.length][pt.length];
+        return matches(in, pt);
     }
 
-    private Boolean[][] cached;
-
-    // we look in reverse order, recursively
-    boolean matches(char[] in, int ini, char[] pt, int pti) {
-        if (pti == -1 && ini == -1) {
-            return true;
-        }
-        if (pti == -1) {
-            return false;
-        }
-        if (ini == -1) {
-            // if only asterisks are missing, returns true
-            for (int i = 0; i <= pti; i++) {
-                if (pt[i] != '*') {
+    boolean matches(char[] input, char[] pattern) {
+        if (input.length == 0) {
+            for (char c : pattern) {
+                if (c != '*') {
                     return false;
                 }
             }
             return true;
         }
-
-        if (cached[ini][pti] != null) {
-            return cached[ini][pti];
+        if (pattern.length == 0) {
+            return false;
         }
 
-        switch (pt[pti]) {
-            case '*':
-                if (pti == 0) {
-                    cached[ini][pti] = true;
-                } else {
-                    cached[ini][pti] = matches(in, ini - 1, pt, pti)
-                            || matches(in, ini - 1, pt, pti - 1)
-                            || matches(in, ini, pt, pti - 1);
+        final int M = input.length - 1;
+        final int N = pattern.length - 1;
+
+        // bottom right of the matrix
+        path[M][N] = direction(input[M], pattern[N]);
+
+        // right edge of the matrix
+        for (int r = M - 1; r >= 0 && path[r + 1][N] == ANYWAY; r--) {
+            path[r][N] = direction(input[r], pattern[N]);
+        }
+
+        // bottom edge of the matrix
+        for (int c = N - 1; c >= 0 && path[M][c + 1] == ANYWAY; c--) {
+            path[M][c] = direction(input[M], pattern[c]);
+        }
+
+        for (int r = M - 1; r >= 0; r--) {
+            for (int c = N - 1; c >= 0; c--) {
+                if (path[r + 1][c] == ANYWAY
+                    || path[r + 1][c + 1] == DIAGONAL
+                    || path[r][c + 1] == ANYWAY) {
+                    path[r][c] = direction(input[r], pattern[c]);
                 }
-                break;
+            }
+        }
+
+        // ignore leading asterisks
+        int c;
+        for (c = 0 ; path[0][c] == NOWAY && pattern[c] == '*'; c++);
+        return path[0][c] != NOWAY;
+    }
+
+    int direction(char input, char pattern) {
+        switch (pattern) {
             case '?':
-                cached[ini][pti] = matches(in, ini - 1, pt, pti - 1);
-                break;
+                return DIAGONAL;
+            case '*':
+                return ANYWAY;
             default:
-                if (in[ini] == pt[pti]) {
-                    cached[ini][pti] = matches(in, ini - 1, pt, pti - 1);
-                } else {
-                    cached[ini][pti] = false;
+                if (pattern == input) {
+                    return DIAGONAL;
                 }
-                break;
         }
-        return cached[ini][pti];
+        return NOWAY;
     }
 }
