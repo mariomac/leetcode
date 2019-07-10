@@ -15,7 +15,7 @@ Num | Problem | Beating
 | 37 | Sudoku Solver |  70.31% |
 38 | Count and say | 47.9% |
 42 | Trapping rain | TLE
-44 | Wildcard matching | TLE
+44 | Wildcard matching | 21% of java submissions
 | 45 | Jump Game II |  **100%** |
 | 50 | Pow(x,n) | 100% of Go submissions |
 | 51 | N-Queens |  65.15% |
